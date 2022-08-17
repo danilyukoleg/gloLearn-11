@@ -7,6 +7,9 @@ const span = document.getElementById("range-span");
 const circle = document.getElementById("circle");
 
 btn2.style.display = "none";
+circle.style.width = 50 + "%";
+circle.style.height = 50 + "%";
+span.textContent = 50;
 
 btn.addEventListener("click", function (e) {
   e.stopPropagation();
@@ -15,7 +18,7 @@ btn.addEventListener("click", function (e) {
 });
 
 range.addEventListener("input", function () {
-  span.textContent = range.value;
-  circle.style.width = range.value + "%";
-  circle.style.height = range.value + "%";
+  span.textContent = this.value;
+  circle.style.width = this.value + "%";
+  circle.style.height = this.value + "%";
 });
